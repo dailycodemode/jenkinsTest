@@ -1,11 +1,4 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Dev') {
-            steps {
-                echo 'Devver..'
-            }
-        }
-    }
+node {
+    checkout scm 
+    /* .. snip .. */
 }
