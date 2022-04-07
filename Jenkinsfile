@@ -1,20 +1,13 @@
+@Library("shared-lib-basic") _
+
 pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Demo') {
             steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                echo 'Hello World'
+                welcome("MultiBranch-Demo")
             }
         }
     }
