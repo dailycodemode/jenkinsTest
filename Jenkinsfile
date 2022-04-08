@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Demo') {
             steps {
-                echo 'Hello World'
+                echo 'Hello World perftest'
                 welcome("MultiBranch-Demo")
             }
         }
