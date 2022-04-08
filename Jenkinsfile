@@ -1,3 +1,5 @@
+println "jenkinsTest@dailycodemode"
+
 pipeline {
     agent any
 
