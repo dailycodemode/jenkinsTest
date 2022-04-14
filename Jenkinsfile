@@ -31,6 +31,7 @@ def type = "nodejs"
 def product = "civil"
 def component = "citizen-ui"
 
+println "==============================================================="
 println "START"
 
 withPipeline(type, product, component) {
