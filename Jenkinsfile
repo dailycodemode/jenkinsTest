@@ -32,10 +32,6 @@ def product = "civil"
 def component = "citizen-ui"
 
 println "START"
-println("env.BRANCH_NAME:" + env.BRANCH_NAME)
-println(env.BRANCH_NAME)
-println(BRANCH_NAME)
-println("branch Name")
 
 withPipeline(type, product, component) {
     println("withPipeline closure")
