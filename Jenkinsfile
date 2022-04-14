@@ -33,6 +33,7 @@ def component = "citizen-ui"
 
 println "==============================================================="
 println "START"
+println("env.BRANCH_NAME: " + env.BRANCH_NAME)
 
 withPipeline(type, product, component) {
     println("withPipeline closure")
