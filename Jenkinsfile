@@ -1,12 +1,11 @@
 
 @Library("shared-lib-basic") _
 
-def method1() {
-  echo 'method1 called'
-}
-
-echo 'Basic'
-method1()
+// def method1() {
+//   echo 'method1 called'
+// }
+// echo 'Basic'
+// method1()
 
 static Map<String, Object> secret(String secretName, String envVariable) {
   [$class     : 'AzureKeyVaultSecret',
@@ -31,24 +30,27 @@ def type = "nodejs"
 def product = "civil"
 def component = "citizen-ui"
 
+println "START"
+
 withPipeline(type, product, component) {
     println("withPipeline closure")
 }
 
 
-pipeline {
-    agent any
+// pipeline {
+//     agent any
     
 
       
-    stages {
-        stage('Hello') {
-            steps {
-                println "groovy print"
-                println env.BRANCH_NAME
-                echo sh(script: 'env|sort', returnStdout: true)
-                welcome("steed")
-            }
-        }
-    }
-}
+//     stages {
+//         stage('Hello') {
+//             steps {
+//                 println "groovy print"
+//                 println env.BRANCH_NAME
+//                 echo sh(script: 'env|sort', returnStdout: true)
+//                 welcome("steed")
+//             }
+//         }
+//     }
+// }
+println "END"
