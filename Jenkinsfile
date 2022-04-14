@@ -27,6 +27,13 @@ def secrets = [
   ]
 ]
 
+def type = "nodejs"
+def product = "civil"
+def component = "citizen-ui"
+
+withPipeline(type, product, component) {
+    println("withPipeline closure")
+}
 
 
 pipeline {
@@ -38,6 +45,7 @@ pipeline {
         stage('Hello') {
             steps {
                 println "groovy print"
+                println env.BRANCH_NAME
                 echo sh(script: 'env|sort', returnStdout: true)
                 welcome("steed")
             }
